@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{%block title %}
+create
+{% endblock %}
+
+
+
+{% block body %}
+<h1>Выбери два файла: </h1>
+<h1>Первый - Основные параметры прогнозов СЭР</h1>
+<h1>Второй - Налог на доходы физических лиц и на прибыль организаций </h1>
+<h1>Отобразится график и его точки в виде загрузившегося документа </h1>
+
+<form method="POST" enctype="multipart/form-data" action="/upload">
+  <input type="file" name="file[]" multiple="">
+  <input type="submit" value=" Получить точки ">
+</form>
+<p><center><img src="/static/1.PNG" alt="KARELIA"></center></p>
+
+
+
+{% endblock %}
